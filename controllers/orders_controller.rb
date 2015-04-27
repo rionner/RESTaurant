@@ -1,4 +1,4 @@
-class OrdersController < Singtra::Base
+class OrdersController < Sinatra::Base
 
   # Sessions
   enable :sessions

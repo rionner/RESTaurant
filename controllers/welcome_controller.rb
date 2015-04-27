@@ -1,4 +1,4 @@
-class WelcomeController < Session::Base
+class WelcomeController < Sinatra::Base
 
   # Sessions
   enable :sessions
@@ -8,7 +8,7 @@ class WelcomeController < Session::Base
 
   # View File Route
   set :views, File.expand_path('../../views', __FILE__)
-  set :public, File.expand_path('../../public', __FILE__)
+  set :public_folder, File.expand_path('../../public', __FILE__)
 
   # Debugging
   get '/pry' do
