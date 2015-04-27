@@ -1,23 +1,3 @@
-require 'bundler'
-Bundler.require()
-
-# Connection
-ActiveRecord::Base.establish_connection(
-  :adapter => 'postgresql',
-  :database => 'restaurant'
-)
-
-# Models
-require './models/food'
-
-# Routes
-# get application home page
-get '/' do
-  erb :index
-end
-
-
-
 
 # save party reciept to a file
 get '/api/parties/:id/receipt' do
