@@ -48,34 +48,27 @@ Verb Route Action
  > DELETE	/api/orders/:id	Removes an order
  > GET	/api/parties/:id/receipt	Saves the party's receipt data to a file.
  > PATCH	/api/parties/:id/checkout	Marks the party as paid
-PUT	/api/parties/:id/checkout	Marks the party as paid
+ > PUT	/api/parties/:id/checkout	Marks the party as paid
 
 
 Technologies:
 
-Sinatra backend application
-Postgresql Database
-A Backbone Application for managing parties and orders
+ > Sinatra backend application
+ > Postgresql Database
+ > A Backbone Application for managing parties and orders
 
 
 By Monday Morning:
 
-Draw ERD for foods & orders & parties
-Sketch out a few ideas about how you'd want the application to look on a screen and a phone
-Set up a github repository for the application
-Add instructors as collaborators:
-amadden80
-code-for-coffee
-alexfulsome
-Begin setting up a Ruby application, (i.e. app.rb config.ru etc.)
-Front-end
-Write a Backbone FoodModel and a FoodCollection
-Verify the a new FoodCollection can fetch all the food items (this is less than 10 lines of backbone code)
-Write static handwritten HTML to help you style
-How does it look on a screen?
-How does it look on a phone?
-Back-end (all in a single app.rb)
-At this stage... support postman NOT backbone for your post requests, i.e. use params
-Foods Api (test via postman)
-Parties API (test via postman)
-Orders API (test via postman)
+ > ERD for foods & orders & parties
+ > Set up a github repository for the application
+ > Add instructors as collaborators:amadden80, code-for-coffee, alexfulsome
+ > Set up a Ruby application, (i.e. app.rb config.ru etc.)
+ > Write a Backbone FoodModel and a FoodCollection
+ > Verify the a new FoodCollection can fetch all the food items (this is less than 10 lines of backbone code)
+
+Write static handwritten HTML to help you style - for a screen and a phone
+ > Back-end (all in a single app.rb)
+ > Foods Api (test via postman)
+ > Parties API (test via postman)
+ > Orders API (test via postman)
