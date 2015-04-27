@@ -1,42 +1,45 @@
 class Food < ActiveRecord::Base
 
-  def initialize(name, description, price, vegan)
+  has_many :parties, :through => :orders
+  has_many :orders
+
+  def initialize(name, description, cents, vegan)
     @name = name
     @description = description
-    @price = price
+    @cents = cents
     @vegan = true
   end
 
-  def name
-    @name
-  end
-
-  def name=(new_name)
-    @name = new_name
-  end
-
-  def description
-    @description
-  end
-
-  def description=(new_description)
-    @description = new_description
-  end
-
-  def price
-    @price
-  end
-
-  def price=(new_price)
-    @price = new_price
-  end
-
-  def vegan
-    @vegan
-  end
+  # def name
+  #   @name
+  # end
+  #
+  # def name=(new_name)
+  #   @name = new_name
+  # end
+  #
+  # def description
+  #   @description
+  # end
+  #
+  # def description=(new_description)
+  #   @description = new_description
+  # end
+  #
+  # def cents
+  #   @cents
+  # end
+  #
+  # def cents=(new_cents)
+  #   @cents = new_cents
+  # end
+  #
+  # def vegan
+  #   @vegan
+  # end
 
   def to_s
-    'Food is good'
+    'food is good'
   end
 
 end
