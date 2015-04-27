@@ -15,28 +15,28 @@ class OrdersController < Singtra::Base
 
   # ORDERS API Routes
   # Create : make a new order
-  post '/api/orders' do
+  post '/' do
     content_type :json
     order = Order.create(order_params)
     order.to_json
   end
 
   # Read : get all orders
-  get '/api/orders' do
+  get '/' do
     content_type :json
     orders = Orders.all
     orders.to_json
   end
 
   # Read : get specific order
-  get '/api/orders/:id' do
+  get '/:id' do
     content_type :json
     order = Orders.find(params[:id].to_i)
     order.to_json
   end
 
   # Update : change specific order
-  patch '/api/orders/:id' do
+  patch '/:id' do
     content_type :json
     order = Orders.find(params[:id].to_i)
     order.update(order_params)
@@ -44,7 +44,7 @@ class OrdersController < Singtra::Base
   end
 
   # Update : change specific order
-  put '/api/orders/:id' do
+  put '/:id' do
     content_type :json
     order = Orders.find(params[:id].to_i)
     order.update(order_params)
@@ -52,10 +52,12 @@ class OrdersController < Singtra::Base
   end
 
   # Delete : destroy specific order
-  delete '/api/orders/:id' do
+  delete '/:id' do
     content_type :json
     Orders.destroy(params[:id].to_i)
     {success: "order record successfully deleted"}.to_json
   end
+
+
 
 end

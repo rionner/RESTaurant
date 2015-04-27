@@ -15,7 +15,7 @@ class FoodsController < Sinatra::Base
 
   # FOODS API Routes
   # Create : make a new food
-  post '/api/foods' do
+  post '/' do
     authenticate_api!
       content_type :json
       food = Food.create(food_params)
@@ -23,21 +23,21 @@ class FoodsController < Sinatra::Base
   end
 
   # Read : get all foods
-  get '/api/foods' do
+  get '/' do
     content_type :json
     foods = Food.all
     foods.to_json
   end
 
   # Read : get specific food
-  get '/api/foods/:id' do
+  get '/:id' do
     content_type :json
     food = Food.find(params[:id].to_i)
     food.to_json
   end
 
   # Update : change specific food
-  patch '/api/foods/:id' do
+  patch '/:id' do
     authenticate_api!
       content_type :json
       food = Food.find(params[:id].to_i)
@@ -46,7 +46,7 @@ class FoodsController < Sinatra::Base
   end
 
   # Update : change specific food
-  put '/api/foods/:id' do
+  put '/:id' do
     authenticate_api!
       content_type :json
       food = Food.find(params[:id].to_i)
@@ -55,7 +55,7 @@ class FoodsController < Sinatra::Base
   end
 
   # Delete : destroy specific food
-  delete '/api/foods/:id' do
+  delete '/:id' do
     authenticate_api!
       content_type :json
       Food.destroy(params[:id].to_i)
