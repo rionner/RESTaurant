@@ -33,24 +33,28 @@ end
 # get specific food item and all parties that included it
 get '/api/foods/:id' do
   content_type :json
-  .to_json
+  food = Food.find_by(params[:id].to_i)
+  food.to_json
 end
 
 # update a food item
 patch '/api/foods/:id' do
   content_type :json
-  .to_json
+  food = Food.find_by(params[:id].to_i).update(params[:food])
+  food.to_json
 end
 
 # update a food item
 put '/api/foods/:id' do
   content_type :json
-  .to_json
+  food = Food.find_by(params[:id].to_i).update(params[:food])
+  food.to_json
 end
 
 # delete a food item
 delete '/api/foods/:id' do
-
+  food = Food.find_by(params[:id].to_i)
+  food.delete
 end
 
 # PARTY API Routes
@@ -72,24 +76,26 @@ get '/api/parties/:id' do
   content_type :json
   party = Party.find_by([:id])
   party.to_json(:include=> [:order, :food])
-  .to_json
 end
 
 # update a party
 patch '/api/parties/:id' do
   content_type :json
-  .to_json
+  party = Party.find_by(params[:id].to_i).update(params[:party])
+  party.to_json
 end
 
 # update a party
 put '/api/parties/:id' do
   content_type :json
-  .to_json
+  party = Party.find_by(params[:id].to_i).update(params[:party])
+  party.to_json
 end
 
 # delete a party
 delete '/api/parties/:id' do
-
+  party = Party.find_by(params[:id].to_i)
+  party.delete
 end
 
 # ORDER API Routes
@@ -109,40 +115,48 @@ end
 # get specific order
 get '/api/orders/:id' do
   content_type :json
-  .to_json
+  order = Order.find_by(params[:id].to_i)
+  order.to_json
 end
 
 # update an order
 patch '/api/orders/:id' do
   content_type :json
-  .to_json
+  order = Order.find_by(params[:id].to_i).update(params(:order))
+  order.to_json
 end
 
 # update an order
 put '/api/orders/:id' do
   content_type :json
-  .to_json
+  order = Order.find_by(params[:id].to_i).update(params(:order))
+  order.to_json
 end
 
 # delete an order
 delete '/api/orders/:id' do
+  order = Order.find_by(params[:id].to_i)
+  delete([:id])
 
 end
 
 # save party reciept to a file
 get '/api/parties/:id/receipt' do
   content_type :json
-  .to_json
+  order = Order.find_by(Party.find_by(params[:id].to_i))
+  order.to_json
 end
 
 # mark the party order as paid
 patch '/api/parties/:id/checkout' do
   content_type :json
-  .to_json
+  party = Party.find_by(params[:id].to_i)
+  party.paid = true.to_json
 end
 
 # mark the party order as paid
 put '/api/parties/:id/checkout' do
   content_type :json
-  .to_json
+  party = Party.find_by(params[:id].to_i)
+  party.paid = true.to_json
 end
