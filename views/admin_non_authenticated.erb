@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/styles.css' media='screen'>
+
+    <link href='http://fonts.googleapis.com/css?family=Martel+Sans:300' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
+
+    <title>RESTaurant</title>
+
+  </head>
+
+  <body>
+    <h2>Manager Portal Login</h2>
+
+    <form action="/sessions" method="post">
+      <input type="text" name="username" placeholder='...username'>
+      <input type="text" name="password" placeholder='...password'>
+      <input type="submit" value="Log-In">
+    </form>
+
+    <p>Not a manager?</p>
+    <a href="/">Click here to return to order page.</a>
+
+    <!-- Libraries -->
+    <script type='text/javascript' src='/public/lib/jquery.js'></script>
+    <script type='text/javascript' src='/public/lib/underscore.js'></script>
+    <script type="text/javascript" src='/public/lib/backbone.js'></script>
+
+    <!-- Backbone Models -->
+    <script src='/models/FoodModel.js'></script>
+
+    <!-- Backbone Collection -->
+    <script src='/collections/FoodCollection.js'></script>
+
+    <!-- Application -->
+    <script src='/javascripts/adminApp.js'></script>
+
+  </body>
+</html>

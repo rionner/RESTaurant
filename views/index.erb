@@ -7,26 +7,44 @@
 
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
 
-    <script type='text/javascript' src='/scripts/jquery.js'></script>
-    <script type='text/javascript' src='/scripts/underscore.js'></script>
-    <script type="text/javascript" src='/scripts/backbone.js'></script>
-
     <title>RESTaurant</title>
 
   </head>
 
   <body>
-    <h1>test TEST</h1>
-    <p>
-      test TEST
-    </p>
     <nav>
+      <h2>Manager Portal</h2>
       <ul>
         <!-- <li><a href="#"></a></li>
         <li><a href="#"></a></li>
         <li><a href="#"></a></li> -->
       </ul>
     </nav>
+
+    <ul class='interface-list' id='menu-list'>
+    </ul>
+
+    <ul class='interface-list' id='party-list'>
+    </ul>
+
+
+
+    <!-- Libraries -->
+    <script type='text/javascript' src='/public/lib/jquery.js'></script>
+    <script type='text/javascript' src='/public/lib/underscore.js'></script>
+    <script type="text/javascript" src='/public/lib/backbone.js'></script>
+
+    <!-- Backbone Models -->
+    <script src='/models/FoodModel.js'></script>
+    <script src='/models/PartyModel.js'>
+
+    </script>
+
+    <!-- Backbone Collection -->
+    <script src='/collections/FoodCollection.js'></script>
+
+    <!-- Application -->
+    <script src='/javascripts/adminApp.js'></script>
 
   </body>
 </html>
