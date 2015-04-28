@@ -16,7 +16,7 @@ $(document).ready(function(){
     el: $('#menu-list')
   })
 
-  app.partyListPainter = new app.ListView({
+  app.partyListView = new app.ListView({
     modelView: app.PartyView,
     collection: app.parties,
     el: $('#party-list')

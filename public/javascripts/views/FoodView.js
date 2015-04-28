@@ -1,15 +1,14 @@
 var app = app || {};
 
+app.foodViewTemplate = $('#food-template').html();
+
 app.FoodView = Backbone.View.extend({
   initialize: function(){
     this.listenTo(this.model, 'change', this.render);
     this.listenTo(this.model, 'delete', this.render)
   },
 
-  template: _.template(
-    '<h3><%= name %></h3><p>
-    <%= description %> </br>
-    <%= cents %></p><button class="select-food">Select</button>'),
+  template: _.template(app.foodViewTemplate),
   tagname: 'li',
   className: 'food',
   render: function(){

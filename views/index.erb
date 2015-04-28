@@ -1,21 +1,17 @@
 <html>
   <head>
-
     <link rel='stylesheet' href='/stylesheets/styles.css' media='screen'>
-
     <link href='http://fonts.googleapis.com/css?family=Martel+Sans:300' rel='stylesheet' type='text/css'>
-
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
-
-    <title>RESTaurant</title>
-
+    <%= erb :template %>
   </head>
 
   <body>
     <nav>
-      <h2>Munch</h2>
+      <div class="logo">
+        <h1>Munch</h1>
+      </div>
       <ul>
-        <li><a href='/'>Order Portal</a></li>
         <li><a href='/admin'>Admin Login</a></li>
       </ul>
     </nav>
@@ -26,22 +22,7 @@
     <ul class='interface-list' id='party-list'>
     </ul>
 
-
-
-    <!-- Libraries -->
-    <script type='text/javascript' src='/javascripts/lib/jquery.js'></script>
-    <script type='text/javascript' src='/javascripts/lib/underscore.js'></script>
-    <script type="text/javascript" src='/javascripts/lib/backbone.js'></script>
-
-    <!-- Backbone Models -->
-    <script src='/javascripts/models/FoodModel.js'></script>
-    <script src='/javascripts/models/PartyModel.js'></script>
-
-    <!-- Backbone Collection -->
-    <script src='/javascripts/collections/FoodCollection.js'></script>
-
-    <!-- Application -->
-    <script src='/javascripts/app.js'></script>
-
+    </div>
   </body>
 </html>
+s

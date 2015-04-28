@@ -1,14 +1,16 @@
 var app = app || {};
 
-app.PartyView = Backbone.View.extend{(
-  initialize: function(){
+app.partyViewTemplate = $('#party-template').html();
+
+app.PartyView = Backbone.View.extend({
+    initialize: function(){
     this.listenTo(this.model, 'change', this.render);
     this.listenTo(this.model, 'delete', this.remove);
   },
 
-  template: _.template('<h3><%= table_num %><button class="select-party">Select</button>'),
+  template: _.template(app.partyViewTemplate),
   tagName: 'li',
-  className: 'party',
+  // className: 'party',
   render: function(){
     this.$el.append(this.template( this.model.attributes ));
     this.renderFoodList();
@@ -33,4 +35,4 @@ app.PartyView = Backbone.View.extend{(
     this.$el.addClass('party-selected');
     app.partySelection = this.model;
   }
-)};
+});

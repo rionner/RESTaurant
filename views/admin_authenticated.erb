@@ -1,22 +1,21 @@
 <html>
   <head>
     <link rel='stylesheet' href='/stylesheets/styles.css' media='screen'>
-
     <link href='http://fonts.googleapis.com/css?family=Martel+Sans:300' rel='stylesheet' type='text/css'>
-
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
-
-    <title>RESTaurant</title>
+    <%= erb :template %>
   </head>
-
   <body>
     <nav>
-      <h2>Munch</h2>
+      <div class="logo">
+        <h1>Munch</h1>
+      </div>
       <ul>
-        <li><a href='/'>Order Portal</a></li>
         <li><a href='/logout'>Logout</a></li>
+        <li><a href='/'>Orders</a></li>
       </ul>
     </nav>
+
 
     <form action="/sessions" method='post'>
       <input type="hidden" name='_method' value='delete'>
@@ -25,20 +24,18 @@
 
 
 
+    <script type="text/template" id="form-template">
 
-    <!-- Libraries -->
-    <script type='text/javascript' src='/javascripts/lib/jquery.js'></script>
-    <script type='text/javascript' src='/javascripts/lib/underscore.js'></script>
-    <script type="text/javascript" src='/javascripts/lib/backbone.js'></script>
+        <input type='text' id='<%= id %>' placeholder='Enter food name'>
 
-    <!-- Backbone Models -->
-    <script src='/models/FoodModel.js'></script>
+        <input type='text' id='cents' placeholder='Enter cents'>
 
-    <!-- Backbone Collection -->
-    <script src='/collections/FoodCollection.js'></script>
+        <input type='text' id='description' placeholder='Enter description'>
 
-    <!-- Application -->
-    <script src='/public/app.js'></script>
+        <button id='submit-<%= id %>'><%= submitValue %></button>
+
+      </script>
+
 
   </body>
 </html>

@@ -1,42 +1,63 @@
+* {
+  display: block;
+}
+
 body {
+  background-image: url(http://i.imgur.com/MCmJjlb.jpg);
+  background-size: cover;
+  align: center;
 
 }
 
 nav {
-  height: 75px;
-  background-color: rgba( 200, 200, 200, 1);
+  height: 70px;
+  background-color: rgba( 255, 255, 255, .5);
+}
+
+nav div {
+  width: 25%;
+  height: 70px;
+  margin: 0;
+  float: left;
+  text-align: center;
+  line-height: 70px;
+}
+
+nav div h1 {
+  color: rgba(255, 47, 0, 1);
+  margin: 0;
 }
 
 nav ul {
-  width: 60%;
+  width: 40%;
+  float: right;
   margin: 0 auto;
-  padding: 0;
+  /*padding: 0;*/
 }
 
 nav li {
-  float: left;
-  color: white;
-  width: 33%;
-  text-align: center;
-  line-height: 75px; /*line-height value should equal the container that the text should be vertically centered in*/
+  width: 50%;
+  float: right;
 }
 
 nav li a {
-  color: white;
+  line-height: 70px;
+  color: rgba(255, 47, 0, 1);
+  text-align: center;
   text-decoration: none;
-  display: block;
-  height: 100%;
-  width: 100%;
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 16px;
 }
 
 nav li a:hover{
-  background-color: red;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 47, 0, 1);
   transition: .5s;
 }
 
 h1 {
   font-family: 'IM Fell English SC', serif;
-  font-size: 24px;
+  font-size: 40px;
 }
 
 h2 {
@@ -47,4 +68,27 @@ h2 {
 p {
   font-family: 'Martel Sans', sans-serif;
   font-size: 12px;
+}
+
+input {
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+}
+
+input .login {
+  margin: 10px auto;
+  padding: 10px;
+  height: 60px;
+  color: rgba(0, 255, 163, 1);
+  border: 2px solid rgba(0, 255, 163, 1);
+  background-color: rgba(255, 255, 255, .5);
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+input .login:hover {
+  color: rgba(255, 255, 255, 1);
+	background-color: rgba(0, 255, 163, 1);
 }
