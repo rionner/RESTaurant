@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.foods = new FoodCollection({
+app.foods = new app.FoodCollection({
   model: app.FoodModel
 });
 
