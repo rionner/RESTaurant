@@ -10,7 +10,13 @@
   </head>
 
   <body>
-    <h2>Manager Portal</h2>
+    <nav>
+      <h2>Munch</h2>
+      <ul>
+        <li><a href='/'>Order Portal</a></li>
+        <li><a href='/logout'>Logout</a></li>
+      </ul>
+    </nav>
 
     <form action="/sessions" method='post'>
       <input type="hidden" name='_method' value='delete'>
@@ -21,9 +27,9 @@
 
 
     <!-- Libraries -->
-    <script type='text/javascript' src='/public/lib/jquery.js'></script>
-    <script type='text/javascript' src='/public/lib/underscore.js'></script>
-    <script type="text/javascript" src='/public/lib/backbone.js'></script>
+    <script type='text/javascript' src='/javascripts/lib/jquery.js'></script>
+    <script type='text/javascript' src='/javascripts/lib/underscore.js'></script>
+    <script type="text/javascript" src='/javascripts/lib/backbone.js'></script>
 
     <!-- Backbone Models -->
     <script src='/models/FoodModel.js'></script>
@@ -32,7 +38,7 @@
     <script src='/collections/FoodCollection.js'></script>
 
     <!-- Application -->
-    <script src='/public/adminApp.js'></script>
+    <script src='/public/app.js'></script>
 
   </body>
 </html>

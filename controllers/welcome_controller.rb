@@ -28,4 +28,8 @@ class WelcomeController < Sinatra::Base
     end
   end
 
+  get '/logout' do
+    current_user = nil
+    redirect '/'
+  end
 end
