@@ -22,7 +22,7 @@ class Party < ActiveRecord::Base
   #     total_price[key] = dollars
   #
   #   end
-
-  end
+  # 
+  # end
 
 end
