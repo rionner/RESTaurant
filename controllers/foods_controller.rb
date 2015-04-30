@@ -34,14 +34,19 @@ class FoodsController < Sinatra::Base
   get '/' do
     content_type :json
     foods = Food.all
-    foods.to_json
+    foods.to_json(methods: :dollars)
   end
 
   # Read : get specific food
   get '/:id' do
     content_type :json
     food = Food.find(params[:id].to_i)
-    food.to_json
+    #
+    # centVal = food.cents[:cents]
+    # dollar = centVal/100
+    # dollar.to_json
+
+    food.to_json(methods: :dollars)
   end
 
   # Update : change specific food

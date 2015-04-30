@@ -15,7 +15,7 @@ app.PartyView = Backbone.View.extend({
 
   // Use and underscore template function
   // Pass in the variable template for the html string
-  template: _.template('<p><%= table_num %><button class="select-party">Select</button>'),
+  template: _.template('<h4>Table: <%= table_num %></h4><button class="select-party">Select</button>'),
   tagName: 'li',
   className: 'party',
   render: function(){

@@ -8,7 +8,7 @@ app.FoodView = Backbone.View.extend({
     this.listenTo(this.model, 'delete', this.remove)
   },
 
-  template: _.template('<p><%= name %> <%= cents %></p><button class="select-food">Select</button>'),
+  template: _.template('<h4><%= name %></h4><p><%= dollars %></p><button class="select-food">Select</button>'),
   tagName: 'li',
   className: 'food',
   render: function(){
