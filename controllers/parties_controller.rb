@@ -6,6 +6,14 @@ class PartiesController < Sinatra::Base
   # Helpers
   helpers Sinatra::SessionHelper
 
+  def party_params
+    return params[:party] if params[:party]
+    body_data = {}
+    @request_body ||= request.body.read.to_s
+    body_data = (JSON(@request_body)) unless @request_body.empty?
+    body_data = body_data['party'] || body_data
+  end
+
   # Connection
 
   # Debugging
@@ -18,21 +26,29 @@ class PartiesController < Sinatra::Base
   post '/' do
     content_type :json
     party = Party.create(party_params)
-    party.to_json
+    party.to_json(include: :foods)
   end
 
   # Read : get all parties
   get '/' do
     content_type :json
     parties = Party.all
-    parties.to_json
+    parties.to_json(include: :foods)
   end
 
   # Read : get specific party
   get '/:id' do
     content_type :json
     party = Party.find(params[:id].to_i)
-    party.to_json
+    party.to_json(include: :foods)
+  end
+
+  # Read : get specific party receipt
+  get '/api/parties/:id/receipt' do
+    content_type :json
+    party = Party.find_by(params[:id].to_i)
+
+    reciept.to_json(include: :foods)
   end
 
   # Update : change specific party
@@ -40,7 +56,7 @@ class PartiesController < Sinatra::Base
     content_type :json
     party = Party.find(params[:id].to_i)
     party.update(party_params)
-    party.to_json
+    party.to_json(include: :foods)
   end
 
   # Update : change specific party
@@ -48,7 +64,7 @@ class PartiesController < Sinatra::Base
     content_type :json
     party = Party.find(params[:id].to_i)
     party.update(party_params)
-    party.to_json
+    party.to_json(include: :foods)
   end
 
   # Delete : destroy specific party

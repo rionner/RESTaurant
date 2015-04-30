@@ -5,24 +5,36 @@
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
     <%= erb :template %>
   </head>
-  <body>
+  <body id="wrapper">
+
     <nav>
       <div class="logo">
         <h1>Munch</h1>
       </div>
       <ul>
-        <li><a href='/admin'>Admin Login</a></li>
         <li><a href='/'>Orders</a></li>
       </ul>
     </nav>
 
+    <section></section>
 
-    <form action="/sessions" method="post">
-      <input type="text" name="username" placeholder='...username'>
-      <input type="text" name="password" placeholder='...password'>
-      <input type="submit" value="Log-In" class='login'>
-    </form>
+    <div id='form-container'>
 
+      <h3>manager portal</h3>
+
+      <form action="/sessions" method="post">
+        <input type="text" name="username" placeholder='...username'>
+        <input type="text" name="password" placeholder='...password'>
+        <input type="submit" value="Log-In">
+      </form>
+
+    </div>
+
+
+
+    <footer>
+      <h2>slow food for thought</h2>
+    </footer>
 
   </body>
 </html>

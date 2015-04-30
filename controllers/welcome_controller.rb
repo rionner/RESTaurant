@@ -30,6 +30,6 @@ class WelcomeController < Sinatra::Base
 
   get '/logout' do
     current_user = nil
-    redirect '/'
+    erb :admin_non_authenticated
   end
 end

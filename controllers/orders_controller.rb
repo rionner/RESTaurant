@@ -6,6 +6,14 @@ class OrdersController < Sinatra::Base
   # Helpers
   helpers Sinatra::SessionHelper
 
+  def order_params
+    return params[:order] if params[:order]
+    body_data = {}
+    @request_body ||= request.body.read.to_s
+    body_data = (JSON(@request_body)) unless @request_body.empty?
+    body_data = body_data['order'] || body_data
+  end
+
   # Connection
 
   # Debugging

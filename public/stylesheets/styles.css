@@ -3,20 +3,31 @@
 }
 
 body {
-  background-image: url(http://i.imgur.com/MCmJjlb.jpg);
-  background-size: cover;
-  align: center;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  min-height: 100%;
+}
 
+#wrapper {
+  height: 100%;
+  width: 100%;
+  background:url(http://i.imgur.com/MCmJjlb.jpg) center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 nav {
   height: 70px;
-  background-color: rgba( 255, 255, 255, .5);
+  width: 100%;
+  background-color: rgba( 255, 255, 255, .75);
+  z-index: 1;
+  position: fixed;
 }
 
 nav div {
-  width: 25%;
   height: 70px;
+  width: 25%;
   margin: 0;
   float: left;
   text-align: center;
@@ -32,7 +43,6 @@ nav ul {
   width: 40%;
   float: right;
   margin: 0 auto;
-  /*padding: 0;*/
 }
 
 nav li {
@@ -55,40 +65,145 @@ nav li a:hover{
   transition: .5s;
 }
 
+section {
+  width: 100%;
+  height: 100px;
+}
+
+#form-container {
+  width: 60%;
+  padding: 10px;
+  margin: 100 auto;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+footer {
+  height: 90px;
+  width: 100%;
+  background-color: rgba(255, 47, 0, 1);
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
 h1 {
   font-family: 'IM Fell English SC', serif;
   font-size: 40px;
+  text-align: center;
 }
 
 h2 {
   font-family: 'IM Fell English SC', serif;
-  font-size: 20px;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+
+h3 {
+  font-family: 'IM Fell English SC', serif;
+  font-size: 26px;
+  color: rgba(0, 178, 114, 1);
+  text-align: center;
 }
 
 p {
   font-family: 'Martel Sans', sans-serif;
-  font-size: 12px;
 }
 
-input {
-  margin: 10px auto;
-  padding: 10px;
-  width: 300px;
+li {
+  font-family: 'Martel Sans', sans-serif;
 }
 
-input .login {
-  margin: 10px auto;
-  padding: 10px;
+input[type='text'] {
   height: 60px;
-  color: rgba(0, 255, 163, 1);
-  border: 2px solid rgba(0, 255, 163, 1);
-  background-color: rgba(255, 255, 255, .5);
+  width: 300px;
+  margin: 10px auto;
+  padding: 0 10px;
+  border: 2px solid rgba(0, 178, 114, 1);
+}
+
+input[type='submit'] {
+  height: 60px;
+  width: 300px;
+  margin: 10px auto;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 1);
+  border: 2px solid rgba(0, 178, 114, 1);
+  background-color: rgba(255, 255, 255, .8);
   font-family: 'Martel Sans', sans-serif;
   font-size: 16px;
   text-decoration: none;
 }
 
-input .login:hover {
+input[type='submit']:hover {
+	background-color: rgba(0, 178, 114, .8);
+}
+
+#submit-food {
+  height: 60px;
+  width: 300px;
+  margin: 10px auto;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 1);
+  border: 2px solid rgba(0, 178, 114, 1);
+  background-color: rgba(255, 255, 255, .8);
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#submit-food:hover {
+  background-color: rgba(0, 178, 114, .8);
   color: rgba(255, 255, 255, 1);
-	background-color: rgba(0, 255, 163, 1);
+}
+
+.interface-list {
+  margin: 0 auto;
+}
+
+#menu-list {
+  width: 30%;
+  margin: 80px auto;
+  float: left;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+#party-list {
+  width: 30%;
+  margin: 80px auto;
+  float: left;
+  background-color: rgba(255, 255, 255, .8);
+}
+
+#order-button{
+  width: 30%;
+  margin: 80px auto;
+  float: left;
+}
+
+#place-order{
+  height: 60px;
+  width: 150px;
+  margin-left: 5%;
+  position: fixed;
+  line-height: 60px;
+  color: rgba(0, 0, 0, 1);
+  border: 2px solid rgba(0, 178, 114, 1);
+  background-color: rgba(255, 255, 255, .8);
+  font-family: 'Martel Sans', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+#place-order:hover{
+  background-color: rgba(0, 178, 114, .8);
+  color: rgba(255, 255, 255, 1);
+}
+
+.party-selected {
+    border: 1px dashed black;
+}
+.food-selected {
+  border: 1px dashed magenta;
 }

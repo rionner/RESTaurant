@@ -5,24 +5,35 @@
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
     <%= erb :template %>
   </head>
+  <body id="wrapper">
 
-  <body>
     <nav>
       <div class="logo">
         <h1>Munch</h1>
       </div>
       <ul>
-        <li><a href='/admin'>Admin Login</a></li>
+        <li><a href='/admin'>Admin</a></li>
       </ul>
     </nav>
 
+    <section></section>
+
     <ul class='interface-list' id='menu-list'>
     </ul>
-
     <ul class='interface-list' id='party-list'>
     </ul>
 
+    <div class='interface-list' id='order-button'>
+      <button id='place-order'>
+        Order
+      </button>
     </div>
+
+
+
+    <footer>
+      <h2>slow food for thought</h2>
+    </footer>
+
   </body>
 </html>
-s

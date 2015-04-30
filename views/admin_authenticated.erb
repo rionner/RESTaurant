@@ -5,7 +5,8 @@
     <link href='http://fonts.googleapis.com/css?family=IM+Fell+English+SC' rel='stylesheet' type='text/css'>
     <%= erb :template %>
   </head>
-  <body>
+  <body id="wrapper">
+
     <nav>
       <div class="logo">
         <h1>Munch</h1>
@@ -16,26 +17,30 @@
       </ul>
     </nav>
 
+    <section></section>
 
-    <form action="/sessions" method='post'>
-      <input type="hidden" name='_method' value='delete'>
-      <input type="submit" value='log-out'>
-    </form>
+    <div id="form-container">
+
+      <h3>create a menu item</h3>
+
+      <!-- <script type="text/template" id="form-template"> -->
+
+        <input type='text' id='food' placeholder='Food Name'>
+
+        <input type='text' id='cents' placeholder='Cents'>
+
+        <input type='text' id='description' placeholder='Description'>
+
+        <button id='submit-food'>Submit</button>
+
+      <!-- </script> -->
+    </div>
 
 
 
-    <script type="text/template" id="form-template">
-
-        <input type='text' id='<%= id %>' placeholder='Enter food name'>
-
-        <input type='text' id='cents' placeholder='Enter cents'>
-
-        <input type='text' id='description' placeholder='Enter description'>
-
-        <button id='submit-<%= id %>'><%= submitValue %></button>
-
-      </script>
-
+    <footer>
+      <h2>slow food for thought</h2>
+    </footer>
 
   </body>
 </html>

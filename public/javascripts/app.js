@@ -22,7 +22,39 @@ $(document).ready(function(){
     el: $('#party-list')
   })
 
-  app.foods.fetch();
-  app.parties.fetch();
+  var updateAll = function(){
+    app.foods.fetch();
+    app.parties.fetch();
+  }
 
+  updateAll();
+
+  $('#place-order').on('click', function() {
+    console.log("insert bad rap lyrics here");
+    if (app.foodSelection && app.partySelection) {
+
+      var partyId = app.partySelection.get('id');
+      var foodId = app.foodSelection.get('id');
+
+    $.ajax({
+      method: 'post',
+      url: '/api/orders',
+      data: {order: {party_id: partyId, food_id: foodId} },
+      success: function(){
+        app.parties.fetch( {reset: true} );
+
+        $('.food-selected').removeClass('food-slected');
+        $('.party-selected').removeClass('party-selected');
+
+        // var food = app.foodSelection.attributes;
+        //
+        // var party = app.partySelection;
+        //
+        // party.attributes.foods.push(food);
+        
+        // party.save();
+      } // success function
+    }) // ajax call
+    }
+  });
 });
