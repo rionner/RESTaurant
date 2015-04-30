@@ -44,11 +44,10 @@ class PartiesController < Sinatra::Base
   end
 
   # Read : get specific party receipt
-  get '/api/parties/:id/receipt' do
+  get '/:id/receipt' do
     content_type :json
-    party = Party.find_by(params[:id].to_i)
-
-    reciept.to_json(include: :foods)
+    party = Party.find(params[:id].to_i)
+    party.to_json(include: :foods, method: :receipt)
   end
 
   # Update : change specific party
