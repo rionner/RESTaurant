@@ -158,35 +158,35 @@ input[type='submit']:hover {
   color: rgba(255, 255, 255, 1);
 }
 
+.order-containment {
+  margin-left: 2%;
+}
+
 .interface-list {
-  margin: 0 auto;
+  margin: 2%;
 }
 
 #menu-list {
-  width: 30%;
-  margin: 80px auto;
+  width: 25%;
   float: left;
   background-color: rgba(255, 255, 255, .8);
 }
 
 #party-list {
-  width: 30%;
-  margin: 80px auto;
+  width: 25%;
   float: left;
   background-color: rgba(255, 255, 255, .8);
 }
 
 #order-button{
-  width: 30%;
-  margin: 80px auto;
-  float: left;
+  width: 20%;
+  float: right;
 }
 
 #place-order{
   height: 60px;
-  width: 150px;
-  margin-left: 5%;
   position: fixed;
+  padding: 0 50px;
   line-height: 60px;
   color: rgba(0, 0, 0, 1);
   border: 2px solid rgba(0, 178, 114, 1);

@@ -1,21 +1,41 @@
 ID,NAME,DESCRIPTION,CENTS,VEGAN
+
 ,Breakfast Plate,"Organic tofu veggie scramble with sautéed portabella mushrooms, bell peppers, onions, garlic and spinach. Comes with side of sautéed greens, mashed sweet potatoes and whole-wheat toast. Chili Sauce on request.",950,TRUE
+
 ,Hemp Seed Breakfast Salad,Organic tofu veggie scramble and roasted potatoes on top of house mixed green salad. Topped with Chilean Hemp Seeds. Comes with whole-wheat toast.,950,TRUE
+
 ,Comfort Breakfast,"Organic tofu veggie scramble with sautéed portabella mushrooms, bell peppers, onions, garlic and spinach. Comes with roasted potatoes, “bacon” or “sausage” and whole-wheat toast. Chili Sauce on request.",950,TRUE
+
 ,Breakfast Burrito,"Organic tofu veggie scramble, Bolivian red quinoa, black beans, “chorizo”, avocado slices all bundled in a whole wheat tortilla with a side of homemade Roasted Tomatillo. Sour cream on request. Comes with roasted potatoes or fruit garnish.",1050,TRUE
+
 ,Corn Meal Pancakes,"Stack of 3 homemade cornmeal and whole-wheat flour pancakes. Comes with soy butter, syrup and fruit garnish.",700,TRUE
+
 ,Italian Wrap,"Organic tofu veggie scramble, crumbled breakfast ""sausage"", delicious homemade marinara and your choice of provolone or vegan mozzarella. Served with a side of Italian roasted potatoes.",1050,TRUE
+
 ,Breakfast Trio,"Two cornmeal pancakes, our signature organic tofu veggie scramble and your choice of “bacon” or “sausage”.",950,TRUE
+
 ,Bananas and Pecans,Extra,250,TRUE
+
 ,Roasted Potatoes,Side,375,TRUE
+
 ,Breakfast “Sausage”,Side,250,TRUE
+
 ,"Breakfast “Bacon""",Side,250,TRUE
+
 ,Mashed Sweet Potatoes,Side,375,TRUE
+
 ,Sautéed Greens,Side,375,TRUE
+
 ,Organic Tofu Veggie Scramble,Side,375,TRUE
+
 ,Cornmeal Pancake,Side,375,TRUE
+
 ,Wild Mushrooms,"Wild Mushrooms, Polenta and Greens GF. Sautéed with red wine, garlic and onions.",900,TRUE
+
 ,Goat Cheese,Extra,150,FALSE
+
+
+
 ,Kalamata Tapenada Pita Pizza,"Grilled pita topped with homemade olive spread, tomatoes, and goat cheese.",900,FALSE
 ,Lemony Hummus Plate,House hummus served with hand made pita and raw veggies.,950,TRUE
 ,Guacamole and Raw Veggies,Served with tortilla chips and roasted tomatillo sauce.,900,TRUE

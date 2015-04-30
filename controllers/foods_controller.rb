@@ -7,7 +7,7 @@ class FoodsController < Sinatra::Base
   helpers Sinatra::SessionHelper
 
   def food_params
-    return params[:food] if params [:food]
+    return params[:food] if params[:food]
     body_data = {}
     @request_body ||= request.body.read.to_s
     body_data = (JSON(@request_body)) unless @request_body.empty?

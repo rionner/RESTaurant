@@ -52,7 +52,7 @@ namespace :db do
   # Generate random Orders
   parties = Party.all
   foods = Food.all
-  rand(10..35).times do |num|
+  rand(10).times do |num|
     Order.create({
       party: parties.sample,
       food: foods.sample

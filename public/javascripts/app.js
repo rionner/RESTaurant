@@ -30,11 +30,12 @@ $(document).ready(function(){
   updateAll();
 
   $('#place-order').on('click', function() {
-    console.log("insert bad rap lyrics here");
+    console.log("place-order clicked!");
     if (app.foodSelection && app.partySelection) {
 
       var partyId = app.partySelection.get('id');
       var foodId = app.foodSelection.get('id');
+    }
 
     $.ajax({
       method: 'post',
@@ -45,16 +46,21 @@ $(document).ready(function(){
 
         $('.food-selected').removeClass('food-slected');
         $('.party-selected').removeClass('party-selected');
-
-        // var food = app.foodSelection.attributes;
-        //
-        // var party = app.partySelection;
-        //
-        // party.attributes.foods.push(food);
-        
-        // party.save();
       } // success function
     }) // ajax call
-    }
-  });
-});
+  }); // $('#place-order').on('click'
+
+  $('#submit-food').on('click', function() {
+    console.log('submit-food clicked!');
+
+    $.ajax({
+      method: 'post',
+      url: '/api/foods',
+      data: {food: {name: $('#food').val(), cents: $('#cents').val(), description: $('#description').val() } },
+      success: function(){
+        app.foods.fetch( {reset: true} );
+      } // success function
+    }) // ajax call
+  }); // event listener
+
+}); // Doc ready
