@@ -44,20 +44,24 @@ nav ul {
 nav li {
   width: 50%;
   float: right;
+  text-align: center;
 }
 
 nav li a {
   line-height: 70px;
   color: rgba(255, 47, 0, 1);
-  text-align: center;
   text-decoration: none;
   font-family: 'Martel Sans', sans-serif;
   font-size: 16px;
 }
 
+nav li:hover{
+  background-color: rgba(255, 47, 0, 1);
+  transition: .5s;
+}
+
 nav li a:hover{
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(255, 47, 0, 1);
   transition: .5s;
 }
 
@@ -113,6 +117,7 @@ p {
 
 li {
   font-family: 'Martel Sans', sans-serif;
+  list-style: none;
 }
 
 input[type='text'] {
